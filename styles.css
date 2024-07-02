@@ -51,7 +51,7 @@ header a{
     left: 50%;
     transform: translate(-50%);
     padding-right: 30%;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 .carousel .list .item .content .title{
     font-size: 50px;
@@ -271,7 +271,7 @@ header a{
 }
 
 /*media queries*/
-@media screen and (max-width: 678px){
+@media screen and (max-width: 679px){
     .carousel .list .item .content{
         padding-right: 0;
     }
