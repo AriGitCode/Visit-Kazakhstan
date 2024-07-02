@@ -2,6 +2,7 @@ let nextDom = document.querySelector(".next");
 let prevDom = document.querySelector(".prev");
 let carouselDom = document.querySelector(".carousel");
 let listItemDom = document.querySelector(".carousel .list");
+let thumbnailDom = document.querySelector(".carousel .thumbnail");
 
 nextDom.addEventListener("click", () => {
     showSlider("next");
@@ -12,11 +13,11 @@ prevDom.addEventListener("click", () => {
 });
 
 let timeRunning = 3000;
-let timeAutoNext = 5000;
+// let timeAutoNext = 7000;
 let runTimeOut;
-let runAutoRun = setTimeout(() => {
-    nextDom.click();
-}, timeAutoNext);
+// let runAutoRun = setTimeout(() => {
+//     nextDom.click();
+// }, timeAutoNext);
 
 function showSlider(type) {
     let itemSlider = document.querySelectorAll(".carousel .list .item");
@@ -41,11 +42,8 @@ function showSlider(type) {
         carouselDom.classList.remove("next");
         carouselDom.classList.remove("prev");
     }, timeRunning);
-    
-    clearTimeout(runTimeOut);
-    
+
     runAutoRun = setTimeout(() => {
         nextDom.click();
     }, timeAutoNext);
 }
-   
